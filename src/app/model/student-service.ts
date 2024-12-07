@@ -1,16 +1,16 @@
 import { Injectable } from "@angular/core";
-import { StudentDetail } from "./student-detail";
+import { StudentDetails } from "./student-details";
 
 @Injectable({
     providedIn: 'root'
 })
 export class StudentService {
-    private studentDetail: StudentDetail[] = [
+    private studentDetails: StudentDetails[] = [
         {
             id: 1,
             firstname: 'Bobby',
             lastname: 'Rocket',
-            dob: new Date(2000,5,3),
+            dob: new Date(2000, 5, 3),
             sex: 'M',
             isPref: true,
             class: 'Jaita 130',
@@ -27,10 +27,10 @@ export class StudentService {
             house: 'Gryffindor'
         }
     ];
-        
-    
 
-    getStudentDetails(): StudentDetail[] {
-        return this.studentDetail;
+
+
+    getStudentDetails(): StudentDetails[] {
+        return this.studentDetails;
     }
 }

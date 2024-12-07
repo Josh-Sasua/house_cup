@@ -1,19 +1,5 @@
-<p>student-list works!</p>
-<!-- @if(detail){
-<article>
-    <div>
-        <h2>{{detail.title}}</h2>
-    </div>
-    <div>
-        <p>Book ID: {{detail.id}}</p>
-        <p>Description: {{detail.description}}</p>
-        <p>Category: {{detail.category}}</p>
-        <p>Pages: {{detail.numPages}}</p>
-        <p>Reviews: {{detail.avgReview}}</p>
-        <button (click)="onSelectBook(detail)">Seleziona</button>
-    </div>
-    <div id="imgDiv">
-        <img [src]="detail.imageUrl" [alt]="detail.title">
-    </div>
-</article>
-} -->
+<div id="studentContainer">
+    @for (student of studentDetails; track $index) {
+    <app-student-details [detail]="student"></app-student-details>
+    }
+</div>
