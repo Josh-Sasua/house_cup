@@ -1,1 +1,5 @@
-<p>score works!</p>
+<div id="scoreContainer">
+    @for (house of houseDetails; track $index) {
+    <app-score-details [detail]="house"></app-score-details>
+    }
+</div>

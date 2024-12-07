@@ -15,7 +15,7 @@ export class StudentDetailsComponent {
   })
   detail: StudentDetails | null = null;
 
-  @Output()
-  chooseStudentEvent = new EventEmitter<StudentDetails>();
+  // @Output()
+  // chooseStudentEvent = new EventEmitter<StudentDetails>();
 
 }
