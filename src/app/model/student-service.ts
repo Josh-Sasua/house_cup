@@ -10,25 +10,34 @@ export class StudentService {
             id: 1,
             firstname: 'Bobby',
             lastname: 'Rocket',
-            dob: new Date(2000, 5, 3),
+            dob: '03.05.2000',
             sex: 'M',
             isPref: true,
-            class: 'Jaita 130',
+            class: 'JAITA 130',
             house: 'RavenClaw'
         },
         {
-            id: 1,
+            id: 2,
             firstname: 'Bobbette',
             lastname: 'Rockette',
-            dob: new Date(2003, 4, 2),
+            dob: '02.04.2003',
             sex: 'F',
             isPref: false,
-            class: 'Jaita 130',
+            class: 'JAITA 130',
             house: 'Gryffindor'
-        }
+        },
+        {
+            id: 3,
+            firstname: 'Charles',
+            lastname: 'Xavier',
+            dob: '21.10.1945',
+            sex: 'M',
+            isPref: true,
+            class: 'JAITA 130',
+            house: 'Slytherin'
+        },
+   
     ];
-
-
 
     getStudentDetails(): StudentDetails[] {
         return this.studentDetails;

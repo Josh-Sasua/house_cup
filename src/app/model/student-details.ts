@@ -2,7 +2,7 @@ export interface StudentDetails{
     id: number;
     firstname: string;
     lastname: string;
-    dob: Date;
+    dob: string;
     sex: string;
     isPref: boolean;
     class: string;

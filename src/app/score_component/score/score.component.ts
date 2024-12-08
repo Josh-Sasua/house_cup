@@ -20,6 +20,7 @@ export class ScoreComponent implements OnInit {
 
   ngOnInit(): void {
     this.houseDetails = this.houseService.getHouseDetails();
- 
+    this.winnerHouse = this.houseService.getWinnerHouse();
   }
+ 
 }
