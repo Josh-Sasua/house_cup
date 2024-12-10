@@ -1,0 +1,22 @@
+#body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start; /* Allinea il contenuto verso l'alto */
+    align-items: center; /* Centra orizzontalmente */
+    background-image: url('https://boo-media.b-cdn.net/blogs/niche-dating-how-to-meet-hot-harry-potter-guys.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Harry Potter Font', serif;
+}
+
+#home {
+    margin: 20px 0 0; 
+    font-size: 4rem; 
+    color: #000; 
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5); 
+    text-align: center;
+    width: 100%; 
+}
