@@ -6,8 +6,8 @@ import { Observable } from "rxjs";
     providedIn: 'root'
 })
 export class StudentService {
-    constructor(private http:HttpClient){}
-    getStudentDetails():Observable<StudentDetails[]>{
+    constructor(private http: HttpClient) { }
+    getStudentDetails(): Observable<StudentDetails[]> {
         return this.http.get<StudentDetails[]>("http://localhost:8080/students");
     }
 }

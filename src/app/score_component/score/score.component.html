@@ -1,9 +1,9 @@
 <div id="scoreContainer">
-    @for (house of houseDetails; track $index) {
+    @for (house of houseRankingDto.rankings; track $index) {
     <app-score-details [detail]="house"></app-score-details>
     }
 </div>
 <div id="winnerHouse">
     <h2>Winning House</h2>
-    <app-score-details [detail]="winnerHouse"></app-score-details>
+    <app-score-details [detail]="houseRankingDto.winner"></app-score-details>
 </div>
