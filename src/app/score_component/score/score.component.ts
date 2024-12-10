@@ -3,6 +3,8 @@ import { HouseDetails } from '../../model/house-details';
 import { HouseService } from '../../model/house-service';
 import { RouterModule } from '@angular/router';
 import { ScoreDetailsComponent } from "../score-details/score-details.component";
+import { Observable } from 'rxjs';
+import { HouseRankingDto } from '../../model/house-ranking-dto';
 
 @Component({
   selector: 'app-score',
@@ -12,15 +14,17 @@ import { ScoreDetailsComponent } from "../score-details/score-details.component"
 })
 export class ScoreComponent implements OnInit {
 
-  houseDetails!: HouseDetails[];
-  winnerHouse: HouseDetails | null = null;
+  houseRankingDto!: HouseRankingDto;
 
   constructor(private houseService: HouseService) {
   }
 
   ngOnInit(): void {
-    this.houseDetails = this.houseService.getHouseDetails();
-    this.winnerHouse = this.houseService.getWinnerHouse();
+    let osd: Observable<HouseRankingDto> = this.houseService.getHouseDetails();
+    osd.subscribe({
+      next: hsd => this.houseRankingDto = hsd,
+      error: err => console.log(err)
+    })
   }
  
 }

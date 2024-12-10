@@ -8,6 +8,6 @@ import { Observable } from "rxjs";
 export class StudentService {
     constructor(private http:HttpClient){}
     getStudentDetails():Observable<StudentDetails[]>{
-        return this.http.get<StudentDetails[]>("http://localhost:8080/student");
+        return this.http.get<StudentDetails[]>("http://localhost:8080/students");
     }
 }
