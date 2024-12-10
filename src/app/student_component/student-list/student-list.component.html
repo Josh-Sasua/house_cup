@@ -1,5 +1,8 @@
-<div id="studentContainer">
+@if(studentDetails){
+    <div id="studentContainer">
     @for (student of studentDetails; track $index) {
     <app-student-details [detail]="student"></app-student-details>
     }
 </div>
+}
+

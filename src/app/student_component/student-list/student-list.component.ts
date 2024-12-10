@@ -3,6 +3,7 @@ import { StudentService } from '../../model/student-service';
 import { RouterModule } from '@angular/router';
 import { StudentDetails } from '../../model/student-details';
 import { StudentDetailsComponent } from '../student-details/student-details.component';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-student-list',
@@ -19,8 +20,12 @@ export class StudentListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.studentDetails = this.studentService.getStudentDetails();
-  }
+    let osd: Observable<StudentDetails[]> = this.studentService.getStudentDetails();
+    osd.subscribe({
+      next: sts => this.studentDetails = sts,
+      error: err => console.log(err)
+    })
+  };
 }
 
 
